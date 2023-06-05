@@ -7,7 +7,7 @@ const templateFooter = document.querySelector('#templateFooter');
 const templateFooterMsg = document.querySelector('#templateFooterMsg');
 const fragment = document.createDocumentFragment('fragment');
 const inputs = document.querySelectorAll("input");
-const modal =document.getElementById('exampleModalCenter');
+const modal =document.getElementById('exampleModal');
 const cuerpo = document.getElementById('cuerpo')
 
 
@@ -91,17 +91,32 @@ const pintarFooter = () => {
 
 const btnModificar = editar => {
    abrirModal();
-    // modal.querySelector('.modal-title').textContent='Módificar ingreso';
+    modal.querySelector('.modal-title').textContent='Módificar ingreso';
+    modal.querySelector('#btnRegistro').textContent='Guardar';
+    console.log(ingresoArray);
     // limpiar();
 };
 
 const limpiar = () => {
     inputs.forEach(item=>{
-        console.log(item);
+        // console.log(item);
         item.value="";
     });
 }
 
 const abrirModal =()=>{
-    modal.classList.add('show');
+    document.getElementById("backdrop").style.display = "block";
+    document.getElementById("exampleModal").style.display = "block";
+    document.getElementById("exampleModal").classList.add("show");
 }
+
+const cerrarModal=()=>{
+    document.getElementById("backdrop").style.display = "none"
+    document.getElementById("exampleModal").style.display = "none"
+    document.getElementById("exampleModal").classList.remove("show")
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+      cerrarModal()
+    }
+  }
