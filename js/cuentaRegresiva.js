@@ -8,8 +8,8 @@ var minutos;
 var operaciónSegundos;
 var contar;
 
-function comenzarsm() {
-	display("comenzar", "iniciar", "reiniciar");
+function comenzar() {
+	display("comenzar", "iniciar");
 	segundos = Number(inputSegundos.value);
 	inputSegundos.style.display = "none";
 	contando();

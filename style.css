@@ -5,13 +5,13 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
-	color: white;
 }
 
 html,
-sm body {
+body {
 	height: 100%;
 }
+/* Estilos de Cuenta regresiva */
 .bodyCuentaRegresiva {
 	background-color: #bbb4b4;
 }
@@ -23,10 +23,6 @@ sm body {
 	padding: 0;
 	margin: 0;
 	background: linear-gradient(to left bottom, #0044d683, #02527783);
-	-webkit-border-radius: 1em;
-	-moz-border-radius: 1em;
-	-ms-border-radius: 1em;
-	-o-border-radius: 1em;
 	backdrop-filter: blur(10px);
 }
 
@@ -85,4 +81,84 @@ sm body {
 
 #segundos::placeholder {
 	color: #ddd;
+}
+/* Estilos de Scroll Infinito */
+.containerCards {
+	background-color: #8a8a8d20;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 1em;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	-ms-border-radius: 1em;
+	-o-border-radius: 1em;
+	box-shadow: 0 0 10px rgba(46, 45, 45, 0.5);
+}
+
+.box {
+	width: 20em;
+	height: 13em;
+	padding: 0.2em;
+	margin: 2em;
+	border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	-webkit-border-radius: 0.4pe;
+	backdrop-filter: blur(25px);
+	box-shadow: 0 0 10px 0 #0c0c0c83;
+	background: linear-gradient(296deg, #c5c6cb, #d7d8dc, #fafaff, #b3b5bc);
+	background-size: 800% 800%;
+	animation: Animation 2.8s ease-in-out infinite;
+	-webkit-animation: Animation 2.8s ease-in-out infinite;
+	-moz-animation: Animation 2s ease-in-out infinite;
+	-o-animation: Animation 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes Animation {
+	0% {
+		background-position: 0% 9%;
+	}
+	50% {
+		background-position: 100% 92%;
+	}
+	100% {
+		background-position: 0% 9%;
+	}
+}
+@-moz-keyframes Animation {
+	0% {
+		background-position: 0% 9%;
+	}
+	50% {
+		background-position: 100% 92%;
+	}
+	100% {
+		background-position: 0% 9%;
+	}
+}
+@-o-keyframes Animation {
+	0% {
+		background-position: 0% 9%;
+	}
+	50% {
+		background-position: 100% 92%;
+	}
+	100% {
+		background-position: 0% 9%;
+	}
+}
+@keyframes Animation {
+	0% {
+		background-position: 0% 9%;
+	}
+	50% {
+		background-position: 100% 92%;
+	}
+	100% {
+		background-position: 0% 9%;
+	}
 }

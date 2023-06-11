@@ -1,4 +1,4 @@
-sm
+
 // Instancias del DOM al JS
 const btnRegistro = document.getElementById("btnRegistro");
 const registro = document.querySelector("#registro")
