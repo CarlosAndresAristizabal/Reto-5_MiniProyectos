@@ -1,4 +1,4 @@
-
+sm
 // Instancias del DOM al JS
 const btnRegistro = document.getElementById("btnRegistro");
 const registro = document.querySelector("#registro")
@@ -7,8 +7,8 @@ const footer = document.querySelector('#footer');
 const templateFooter = document.querySelector('#templateFooter');
 const templateFooterMsg = document.querySelector('#templateFooterMsg');
 const fragment = document.createDocumentFragment('fragment');
-const modal =document.getElementById('exampleModal');
-const inputs= document.querySelectorAll("input")
+const modal = document.getElementById('exampleModal');
+const inputs = document.querySelectorAll("input")
 
 // Variables globales
 var ingresoArray = [];
@@ -44,7 +44,7 @@ const pintarIngreso = () => {
         clone.querySelector('td:nth-child(1)').textContent = index + 1;
         clone.querySelector('td:nth-child(2)').textContent = item.nombre;
         clone.querySelector('td:nth-child(3)').textContent = item.fecha;
-        clone.querySelector('td:nth-child(4) span').textContent = item.valor.toLocaleString('es-CO',{tyle: 'currency', currency: 'COP' });
+        clone.querySelector('td:nth-child(4) span').textContent = item.valor.toLocaleString('es-CO', { tyle: 'currency', currency: 'COP' });
         // creamos un fragment para que no haiga reflow en la página y se añade el clone
         fragment.appendChild(clone);
     });
@@ -55,24 +55,25 @@ const pintarIngreso = () => {
 // Funcion flecha para visualizar el footer con la suma del total
 const pintarFooter = () => {
     // Colocamos el footer en blanco con el contexto
-    footer.textContent = ''; 
+    footer.textContent = '';
     //Creamos una variable constante del total que recibira daros del array del valor,se sumara y almacenara el resultado
     const total = ingresoArray.reduce(
         (acc, current) => acc + current.valor,
         0
-        );
+    );
     // Creamos un template para el footer se clona el contenido
     const clone = templateFooter.content.cloneNode(true);
     // se seleccion las etiquetas para mostrar el contexto
-    clone.querySelector('p span').textContent = total.toLocaleString('es-CO',{tyle: 'currency', currency: 'COP' });
+    clone.querySelector('p span').textContent = total.toLocaleString('es-CO', { tyle: 'currency', currency: 'COP' });
     //se añade el clone al footer
     footer.appendChild(clone);
-    
+
 };
 //Función felcha para limpiar campos de ingreso
 const limpiar = () => {
     // recorremos los todos input del documento y el contexto se lo borramos
-    inputs.forEach(item=>{
-        item.value="";
+    inputs.forEach(item => {
+        item.value = "";
     });
 }
+

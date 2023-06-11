@@ -1,7 +1,88 @@
+/** @format */
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
 }
 
+html,
+sm body {
+	height: 100%;
+}
+.bodyCuentaRegresiva {
+	background-color: #bbb4b4;
+}
 
+.cuerpoCuentaRegresiva {
+	box-shadow: inset 0 0 20px rgba(19, 18, 18, 0.5);
+	box-shadow: 0 0 20px rgba(24, 23, 23, 0.5);
+	width: 70%;
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(to left bottom, #0044d683, #02527783);
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	-ms-border-radius: 1em;
+	-o-border-radius: 1em;
+	backdrop-filter: blur(10px);
+}
+
+.headerCuentaRegresiva {
+	width: 100%;
+	box-shadow: inset 0 0 20px rgba(46, 45, 45, 0.5);
+	box-shadow: 0 0 20px rgba(39, 38, 38, 0.5);
+	background: linear-gradient(to left top, #07070783, #5fa0be83);
+	backdrop-filter: blur(10px);
+	border-radius: 0.4em 0.4em 0 0;
+	-webkit-border-radius: 0.4em 0.4em 0 0;
+	-moz-border-radius: 0.4em 0.4em 0 0;
+	-ms-border-radius: 0.4em 0.4em 0 0;
+	-o-border-radius: 0.4em 0.4em 0 0;
+}
+
+.containerCuentaRegresiva {
+	height: 60vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+
+.btn {
+	padding: 0.8rem 1.7rem;
+	background-color: #0c0c0c;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 4px;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+#continuar,
+#parar,
+#iniciar {
+	display: none;
+}
+
+#segundos {
+	width: 250px;
+	background: none;
+	outline: none;
+	border: none;
+	border-bottom: 4px solid #fff;
+	padding: 1rem;
+	font-size: 2rem;
+	color: white;
+}
+
+#segundos::placeholder {
+	color: #ddd;
+}
