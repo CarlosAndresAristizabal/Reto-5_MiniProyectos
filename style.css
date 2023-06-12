@@ -24,6 +24,11 @@ body {
 	margin: 0;
 	background: linear-gradient(to left bottom, #0044d683, #02527783);
 	backdrop-filter: blur(10px);
+	border-radius: 0.9em;
+	-webkit-border-radius: 0.9em;
+	-moz-border-radius: 0.9em;
+	-ms-border-radius: 0.9em;
+	-o-border-radius: 0.9em;
 }
 
 .headerCuentaRegresiva {

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cuenta Regresiva</title>
+  <title>Audio a Número</title>
   <!-- Css style -->
   <link rel="stylesheet" href="style.css" />
   <!-- Bootstrap -->
@@ -75,29 +75,31 @@
       </div>
     </nav>
   </header>
-  <section class="cuerpoCuentaRegresiva m-auto text-white">
-    <div class="row mt-5">
+  <section class="bg-primary m-auto">
+    <div class="row">
       <article class="col-12 col-sm-12 m-auto ">
-        <h1 class="titulotitle headerCuentaRegresiva p-5 text-center ">Cuenta Regresiva</h1>
-        <div class="containerCuentaRegresiva">
-          <div class="contador embed-responsive-item"></div>
-          <input id="segundos" type="number" placeholder="Segundos..." class="text-center">
-          <div class="buttons">
-            <button class="btn iniciar text-white" id="iniciar" value="1" onclick="check(this)">Iniciar</button>
-            <button class="btn iniciar text-white" id="continuar" value="1" onclick="check(this)">Continuar</button>
-            <button class="btn parar text-white" id="parar" value="0" onclick="check(this)">Parar</button>
-            <button class="btn iniciar text-white" id="comenzar" onclick="comenzar()">Comenzar</button>
-          </div>
-          <a href="cuentaRegresiva.html">
-            <button class="btn reinciar text-white my-4" id="reiniciar" value="0">Reiniciar</button>
-          </a>
+        <h1 class="p-5 text-center font-weight-bold">Audio a Número</h1>
+    </article>
+  </div>
+</section>
+  <section class="m-auto mt-5 text-center">
+  <div class="row">
+    <article class="col-12 col-sm-12 m-auto ">
+        <button id="btnIniciarAudio">
+            comenzar
+        </button>
+        <button id="btnDetenerAudio">
+            Detener
+        </button>
+        <textarea name="salidaAudio" id="textAudio" cols="30" rows="10"></textarea>  
+        <div class="text-center" id="number">
+
         </div>
-      </article>
+     </article>
     </div>
   </section>
   <!-- Scripts -->
-  <script src="js/cuentaRegresiva.js
-  "></script>
+  <script src="js/audioNumero.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
