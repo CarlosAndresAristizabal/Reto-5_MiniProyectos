@@ -167,3 +167,51 @@ body {
 		background-position: 0% 9%;
 	}
 }
+
+/* Estilos de audio a Número */
+.bg-titulo-audioNumero{
+	background: linear-gradient(to left top, #ced0d683, #581ff383);
+	box-shadow: 0 0 15px rgba(19, 18, 18, 0.5);
+
+}
+.resultado{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5em;
+	border-radius: 0.4em;
+	background: linear-gradient(to left top, #07070783, #5fa0be83);
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	box-shadow: 0 0 15px rgba(19, 18, 18, 0.5);
+
+}
+
+#textAudio{
+	width: calc(100% - 5em);
+	border: none;
+	padding: 0.5em;
+	font-size: 2em;
+	align-items: center;
+	text-align: center;
+	justify-items: center;
+	resize: none;
+	border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	box-shadow: 0 0 15px rgba(19, 18, 18, 0.5);
+
+}
+.btns{
+	padding-top: 2em;
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}

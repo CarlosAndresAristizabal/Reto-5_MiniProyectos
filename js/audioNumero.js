@@ -7,7 +7,7 @@ var grabar = new webkitSpeechRecognition();
 // esto nos permite constantemente estar reconociendo la voz
 grabar.continuous = true;
 //  esto nos permite elegir que tipo de lenguaje  que va hacer reconociedo
-grabar.lang = 'es-ES';
+grabar.lang = 'es-Es';
 // esto nos permite cuando hay un espacio de silencio deje de grabar y nos muestre el resultado
 grabar.interim = false;
 // iniciamos con el bton de inicar para comenzar a grabar
@@ -20,25 +20,14 @@ btnDetener.addEventListener('click', () => {
 });
 // podemos obtener el resultado de la grabación
 grabar.onresult = (event) => {
-    // creamos una varibel apra obtener el texto capturado 
+    // creamos una varible para obtener el texto capturado 
     const texto = event.results[ event.results.length - 1 ][ 0 ].transcript;
-    textAudio.value = texto;
-}
-
-var rec;
-if (!("webkitSpeechRecognition" in window)) {
-    alert("Sorry, you don't use custom API");
-} else {
-    rec = new webkitSpeechRecognition();
-    rec.lang = "es-ES";
-    rec.continuous = true;
-    rec.interim = false;
-    rec.addEventListener("result", begin);
-}
-
-function begin(event) {
-    for (let i = event.resultIndex; i < event.results.length; i++) {
-        document.getElementById('number').innerHTML = event.results[ i ][ 0 ].transcript;
+    // hacemos una condición para que el text capturado sea un número
+    if(isNaN(texto)== false){
+        //Si es un número lo imprime
+        textAudio.value = texto;
+    }else{
+        //Si no envia a pantalla un mensaje de error
+        textAudio.value=" No es un Número"
     }
 }
-rec.start();
