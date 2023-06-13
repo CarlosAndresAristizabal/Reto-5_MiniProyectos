@@ -215,3 +215,14 @@ body {
 	justify-content: space-around;
 
 }
+
+/* Estilos deL juego de breakout */
+#canvas{	
+	border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	border: 1px double white;
+	background: linear-gradient(to left top, #070707c4, #15b0f883);
+}
