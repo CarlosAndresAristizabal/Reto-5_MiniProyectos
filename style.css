@@ -1,16 +1,91 @@
 /** @format */
+@font-face {
+	font-family: Digital;
+	src: url('../fonts/DigitalNumbers.ttf');
+} 
+:root{
 
+	--font-family-Monserrat: 'Montserrat', sans-serif;
+	--font-family-Digital:'Digital';
+}
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
+	transition: all .8s;
+	/* font-family: var(--font-family-Monserrat); */
 }
 
 html,
 body {
 	height: 100%;
+	font-family: var(--font-family-Monserrat);
 }
+.bodySuma{
+	font-family: var(--font-family-Monserrat);
+}
+/* Cuenta regresiva año nuevo */
+
+.countdown {
+	padding: 4em;
+	border: solid 10px rgb(50, 50, 50);
+	border-radius: 0.2em;
+	font-size: 50px;
+	color: rgb(255, 125, 125);
+	text-shadow: 0 0 10px red;
+	background-color: rgb(0, 0, 0);
+	box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 5);
+	font-family: var(--font-family-Digital) !important;
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
+	-ms-border-radius: 0.2em;
+	-o-border-radius: 0.2em;
+}
+  .countdown span {
+	text-align: end;
+	position: relative;
+	display: inline-block;
+	min-width: 80px;
+	height: 90px;
+	padding-bottom: 10px;
+  }
+  .countdown #diaElement::after {
+	content: '888';
+	position: absolute;
+	left: 0;
+	color: rgba(255, 255, 255, 0.1);
+	text-shadow: none;
+  }
+  .countdown span::after {
+	content: '88';
+	position: absolute;
+	left: 0;
+	color: rgba(255, 255, 255, 0.1);
+	text-shadow: none;
+  }
+  .countdown #diaElement::before {
+	content: 'DIAS';
+  }
+  .countdown #horaElement::before {
+	content: 'HORAS';
+  }
+  .countdown #minElement::before {
+	content: 'MINS';
+  }
+  .countdown #secElement::before {
+	content: 'SECS';
+  }
+  .countdown span::before {
+	position: absolute;
+	bottom: -20%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-family: 'Digital', 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: darkgray;
+	text-shadow: none;
+  }
 /* Estilos de Cuenta regresiva */
 .bodyCuentaRegresiva {
 	background-color: #bbb4b4;
@@ -167,6 +242,19 @@ body {
 		background-position: 0% 9%;
 	}
 }
+#botup{
+	position: fixed;
+	display: none;
+	top: 0px;
+	left: 100px;
+	font-size: 2rem;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	text-align: center;
+	background-color:rgba(165, 162, 157, 0.582);
+	
+	}
 
 /* Estilos de audio a Número */
 .bg-titulo-audioNumero{
