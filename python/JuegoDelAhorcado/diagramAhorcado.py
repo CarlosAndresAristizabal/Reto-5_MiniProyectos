@@ -4,7 +4,7 @@ vidas_diccionario_visual = {
                | /        | 
                |/        ( )
                |          |
-               |         / \\
+               |         / \
                |
            """,
     1: """
