@@ -116,17 +116,16 @@ while menuOpciones != 5:
             # recoremos el directorio y si se encuentra se elimana el item
             for item in directorio:
                 if Nombre in item:
-                    item.clear()
+                    directorio.pop(directorio.index(item))
                     print('CONTACTO ELIMINADO')
                 else:
                     print(Nombre, "No se puede encontrar")
         if menuOpciones3 == "2":
             Nombre = input("Nombre: ")
             print('***** PROCESANDO... ******')
-            for item in directorio[0:10]:
+            for item in directorio:
                 if Nombre in item:
-                    # borramos el nombre
-                    item.clear()
+                    # Presentamos titulo
                     print('*****************************')
                     print('**** ACTUALIZAR CONTACTO ****')
                     print('*****************************')
@@ -139,8 +138,9 @@ while menuOpciones != 5:
                     telefono[Nombre] = Telefono
                     nombre[Telefono] = Nombre
                     email[Email] = Email
-                    # despues de capturar  empujamos los datos al
-                    directorio.append([Nombre, Telefono, Email])
+                    # despues de capturar  actualizamos los datos en la ubicacion donde va
+                    directorio[directorio.index(item)] = [
+                        Nombre, Telefono, Email]
                     print('GUARDADO EXITOSO...')
                 else:
                     print(Nombre, "No se puede encontrar")
@@ -151,7 +151,7 @@ while menuOpciones != 5:
         print('******************************')
         # recorremos el directorio y lo mostramos en pantalla
         for item in directorio:
-            print(item, "\n")
+            print(item)
     # salimos del menu y del programa
     elif menuOpciones == 5:
         print('Gracias por usarlo')
