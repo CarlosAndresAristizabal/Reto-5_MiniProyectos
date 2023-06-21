@@ -1,0 +1,138 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" container="width=device-width, initial-scale=1.0" />
+		<title>{% block title %} {% endblock %}</title>
+		<!-- Css style -->
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" />
+		<!-- Bootstrap -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous" />
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-info font-weight-bold">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">
+						<img
+							class="logo horizontal-logo"
+							src="https://cdn.shopify.com/s/files/1/0569/6267/8818/files/logo-nao-x-tecmilenio.png?v=1664228053&width=200"
+							alt="logo" />
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarSupportedcontainer"
+						aria-controls="navbarSupportedcontainer"
+						aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedcontainer">
+						<ul class="navbar-nav ml-auto m-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href=""
+									id="navbarDropdown1"
+									role="button"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false">
+									Ciclo 1
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+									<a class="dropdown-item" href="{{ url_for('sumaIngreso') }}"
+										>Suma de Ingresos</a
+									>
+									<a class="dropdown-item" href="{{ url_for('scrollInfinito') }}"
+										>Scroll Infinito</a
+									>
+									<a class="dropdown-item" href="{{ url_for('juegoBreakOut') }}"
+										>Juego de Breakout</a
+									>
+									<a class="dropdown-item" href="{{ url_for('cuentaRegresivaAnoNuevo') }}"
+										>Cuenta Regresiva</a
+									>
+									<a class="dropdown-item" href="{{ url_for('audioaNumero') }}"
+										>Audio a Número</a
+									>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href=""
+									id="navbarDropdown1"
+									role="button"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false">
+									Ciclo 2
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+									<a class="dropdown-item" href="#">Escribir Número en palabras</a>
+									<a class="dropdown-item" href="#">Web Scrape</a>
+									<a class="dropdown-item" href="#">Menú Telefónico (USSD)</a>
+									<a class="dropdown-item" href="#">Ratings de Películas</a>
+									<a class="dropdown-item" href="#">Juego del Ahorcado</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href=""
+									id="navbarDropdown1"
+									role="button"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false">
+									Ciclo 3
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+									<a class="dropdown-item" href="{{ url_for('pintarPantalla') }}"
+										>Pintar en Pantalla</a
+									>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		{% block content %} {% endblock %}
+		<!-- Scripts -->
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"></script>
+		<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+		<script
+			src="https://kit.fontawesome.com/c2a0008a85.js"
+			crossorigin="anonymous"></script>
+	</body>
+</html>

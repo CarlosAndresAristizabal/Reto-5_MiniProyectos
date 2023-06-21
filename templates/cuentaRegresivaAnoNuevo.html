@@ -1,0 +1,25 @@
+<!-- @format -->
+
+{% extends 'base.html' %} {% block title %}Cuenta Regresiva Año Nuevo {% endblock %} {%
+block content %}
+<section class="cuerpoCuentaRegresiva m-auto text-white">
+	<div class="row mt-5">
+		<article class="col-12 col-sm-12 m-auto">
+			<h1 class="titulotitle headerCuentaRegresiva p-5 text-center">
+				Cuenta Regresiva Año Nuevo
+			</h1>
+			<div class="containerCuentaRegresiva">
+				<p class="countdown">
+					<span id="diaElement">0</span>
+					<span id="horaElement">0</span>:<span id="minElement">0</span>:<span
+						id="secElement"
+						>0</span
+					>
+				</p>
+			</div>
+		</article>
+	</div>
+</section>
+<!-- Scripts -->
+<script src="{{ url_for('static',filename='js/cuentaRegresiva.js') }} "></script>
+{% endblock %}

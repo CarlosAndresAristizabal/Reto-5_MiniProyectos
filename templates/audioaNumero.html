@@ -1,0 +1,30 @@
+<!-- @format -->
+
+{% extends 'base.html' %} {% block title %}Audio a Número {% endblock %} {% block content
+%}
+<section class="bg-titulo-audioNumero m-auto">
+	<div class="row">
+		<article class="col-12 col-sm-12 m-auto">
+			<h1 class="p-5 text-center font-weight-bold">Audio a Número</h1>
+		</article>
+	</div>
+</section>
+<section class="m-auto mt-5 text-center responsive">
+	<div class="row">
+		<article class="col-12 col-sm-12 m-auto resultado flex-nowrap">
+			<textarea
+				readonly="readonly"
+				name="salidaAudio"
+				id="textAudio"
+				cols="50"
+				placeholder="Para iniciar dale click al botón de Comenzar para empezar a grabar y para dejar de grabar presionas el botón de Detener."></textarea>
+			<div class="btns">
+				<button class="btn btn-success" id="btnIniciarAudio">Comenzar</button>
+				<button class="btn btn-danger" id="btnDetenerAudio">Detener</button>
+			</div>
+		</article>
+	</div>
+</section>
+<script src="{{ url_for('static',filename='js/audioNumero.js') }}"></script>
+
+{% endblock %}

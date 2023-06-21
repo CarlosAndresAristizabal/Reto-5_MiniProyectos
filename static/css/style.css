@@ -1,0 +1,350 @@
+/** @format */
+@font-face {
+	font-family: Digital;
+	src: url('../fonts/DigitalNumbers.ttf');
+}
+:root {
+	--font-family-Monserrat: 'Montserrat', sans-serif;
+	--font-family-Digital: 'Digital';
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	transition: all 0.8s;
+	/* font-family: var(--font-family-Monserrat); */
+}
+
+html,
+body {
+	height: 100%;
+	font-family: var(--font-family-Monserrat);
+}
+.bodySuma {
+	font-family: var(--font-family-Monserrat);
+}
+/* Cuenta regresiva año nuevo */
+
+.countdown {
+	padding: 4em;
+	border: solid 10px rgb(50, 50, 50);
+	border-radius: 0.2em;
+	font-size: 50px;
+	color: rgb(255, 125, 125);
+	text-shadow: 0 0 10px red;
+	background-color: rgb(0, 0, 0);
+	box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 5);
+	font-family: var(--font-family-Digital) !important;
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
+	-ms-border-radius: 0.2em;
+	-o-border-radius: 0.2em;
+}
+.countdown span {
+	text-align: end;
+	position: relative;
+	display: inline-block;
+	min-width: 80px;
+	height: 90px;
+	padding-bottom: 10px;
+}
+.countdown #diaElement::after {
+	content: '888';
+	position: absolute;
+	left: 0;
+	color: rgba(255, 255, 255, 0.1);
+	text-shadow: none;
+}
+.countdown span::after {
+	content: '88';
+	position: absolute;
+	left: 0;
+	color: rgba(255, 255, 255, 0.1);
+	text-shadow: none;
+}
+.countdown #diaElement::before {
+	content: 'DIAS';
+}
+.countdown #horaElement::before {
+	content: 'HORAS';
+}
+.countdown #minElement::before {
+	content: 'MINS';
+}
+.countdown #secElement::before {
+	content: 'SECS';
+}
+.countdown span::before {
+	position: absolute;
+	bottom: -20%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-family: 'Digital', 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: darkgray;
+	text-shadow: none;
+}
+/* Estilos de Cuenta regresiva */
+.bodyCuentaRegresiva {
+	background-color: #bbb4b4;
+}
+
+.cuerpoCuentaRegresiva {
+	box-shadow: inset 0 0 20px rgba(19, 18, 18, 0.5);
+	box-shadow: 0 0 20px rgba(24, 23, 23, 0.5);
+	width: 70%;
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(to left bottom, #0044d683, #02527783);
+	backdrop-filter: blur(10px);
+	border-radius: 0.9em;
+	-webkit-border-radius: 0.9em;
+	-moz-border-radius: 0.9em;
+	-ms-border-radius: 0.9em;
+	-o-border-radius: 0.9em;
+}
+
+.headerCuentaRegresiva {
+	width: 100%;
+	box-shadow: inset 0 0 20px rgba(46, 45, 45, 0.5);
+	box-shadow: 0 0 20px rgba(39, 38, 38, 0.5);
+	background: linear-gradient(to left top, #07070783, #5fa0be83);
+	backdrop-filter: blur(10px);
+	border-radius: 0.4em 0.4em 0 0;
+	-webkit-border-radius: 0.4em 0.4em 0 0;
+	-moz-border-radius: 0.4em 0.4em 0 0;
+	-ms-border-radius: 0.4em 0.4em 0 0;
+	-o-border-radius: 0.4em 0.4em 0 0;
+}
+
+.containerCuentaRegresiva {
+	height: 60vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+
+.btn {
+	padding: 0.8rem 1.7rem;
+	background-color: #0c0c0c;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 4px;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+#continuar,
+#parar,
+#iniciar {
+	display: none;
+}
+
+#segundos {
+	width: 250px;
+	background: none;
+	outline: none;
+	border: none;
+	border-bottom: 4px solid #fff;
+	padding: 1rem;
+	font-size: 2rem;
+	color: white;
+}
+
+#segundos::placeholder {
+	color: #ddd;
+}
+/* Estilos de Scroll Infinito */
+.containerCards {
+	background-color: #8a8a8d20;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 1em;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	-ms-border-radius: 1em;
+	-o-border-radius: 1em;
+	box-shadow: 0 0 10px rgba(46, 45, 45, 0.5);
+}
+
+.box {
+	width: 20em;
+	height: 13em;
+	padding: 0.2em;
+	margin: 2em;
+	border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	-webkit-border-radius: 0.4pe;
+	backdrop-filter: blur(25px);
+	box-shadow: 0 0 10px 0 #0c0c0c83;
+	background: linear-gradient(296deg, #c5c6cb, #d7d8dc, #fafaff, #b3b5bc);
+	background-size: 800% 800%;
+	animation: Animation 2.8s ease-in-out infinite;
+	-webkit-animation: Animation 2.8s ease-in-out infinite;
+	-moz-animation: Animation 2s ease-in-out infinite;
+	-o-animation: Animation 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes Animation {
+	0% {
+		background-position: 0% 9%;
+	}
+	50% {
+		background-position: 100% 92%;
+	}
+	100% {
+		background-position: 0% 9%;
+	}
+}
+@-moz-keyframes Animation {
+	0% {
+		background-position: 0% 9%;
+	}
+	50% {
+		background-position: 100% 92%;
+	}
+	100% {
+		background-position: 0% 9%;
+	}
+}
+@-o-keyframes Animation {
+	0% {
+		background-position: 0% 9%;
+	}
+	50% {
+		background-position: 100% 92%;
+	}
+	100% {
+		background-position: 0% 9%;
+	}
+}
+@keyframes Animation {
+	0% {
+		background-position: 0% 9%;
+	}
+	50% {
+		background-position: 100% 92%;
+	}
+	100% {
+		background-position: 0% 9%;
+	}
+}
+#botup {
+	position: fixed;
+	display: none;
+	top: 0px;
+	left: 100px;
+	font-size: 2rem;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	text-align: center;
+	background-color: rgba(165, 162, 157, 0.582);
+}
+
+/* Estilos de audio a Número */
+.bg-titulo-audioNumero {
+	background: linear-gradient(to left top, #ced0d683, #581ff383);
+	box-shadow: 0 0 15px rgba(19, 18, 18, 0.5);
+}
+.resultado {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5em;
+	border-radius: 0.4em;
+	background: linear-gradient(to left top, #07070783, #5fa0be83);
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	box-shadow: 0 0 15px rgba(19, 18, 18, 0.5);
+}
+
+#textAudio {
+	width: calc(100% - 5em);
+	border: none;
+	padding: 0.5em;
+	font-size: 2em;
+	align-items: center;
+	text-align: center;
+	justify-items: center;
+	resize: none;
+	border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	box-shadow: 0 0 15px rgba(19, 18, 18, 0.5);
+}
+.btns {
+	padding-top: 2em;
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+/* Estilos deL juego de breakout */
+#canvas {
+	border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	border: 1px double white;
+	background: linear-gradient(to left top, #070707c4, #15b0f883);
+}
+/*Estilos de Pintar pantalla*/
+
+#paint {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	flex-wrap: wrap;
+	text-align: center;
+}
+.tablaCanvas,
+.tablasFooter {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	width: 100%;
+	flex-wrap: wrap;
+	text-align: center;
+	padding: 1em;
+}
+
+.footerPintar {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 2em;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

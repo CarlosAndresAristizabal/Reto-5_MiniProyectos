@@ -1,0 +1,262 @@
+{% extends 'base.html' %} {% block title %} Pintar Pantalla {% endblock %} {% block content
+%}
+			<section class="text-center m-auto">			
+					<h1 class="text-center mb-5 p-5 bg-dark text-white">Pintar en pantalla</h1>
+					<body onload="pencil()">
+						<table class="tablaCanvas text-center m-auto">
+							<tr>
+								<td>
+									<canvas
+										id="paint"
+										width="750"
+										height="450"
+										style="border: 5px Double #000000"></canvas>
+								</td>
+							</tr>
+						</table>
+					</body>
+				</div>
+			</div>
+		</section>
+		<footer class="footerPintar text-center m-auto bg-dark text-white">            
+			<table class="tablaFooter">
+				<tr>
+					<td class="pt-3">
+						<button
+							id="penciltool"
+							type="button"
+							class="btn btn-info fs-1 p-auto m-auto"
+							onclick="pencil()">
+							Pencil
+						</button>
+						<button
+							id="linetool"
+							type="button"
+							class="btn btn-info fs-1 p-auto m-auto"
+							onclick="line()">
+							Line
+						</button>
+						<button
+							id="rectangletool"
+							type="button"
+							class="btn btn-info fs-1 p-auto m-auto"
+							onclick="rectangle()">
+							Rectangle
+						</button>
+						<button
+							id="circletool"
+							type="button"
+							class="btn btn-info fs-1 p-auto m-auto"
+							onclick="circle()">
+							Circle
+						</button>
+						<button
+							id="erasertool"
+							type="button"
+							class="btn btn-info fs-1 p-auto m-auto"
+							onclick="eraser()">
+							Eraser
+						</button>
+						<button
+							id="resettool"
+							type="button"
+							class="btn btn-info fs-1 p-auto m-auto"
+							onclick="reset()">
+							Reset
+						</button>
+					</td>
+				</tr>
+			</table>
+			<table class="pt-3 m-auto tablaFooter">
+				<tr class="pr-3 m-auto">
+					<td><label onclick="fill()">Color</label></td>
+					<td>
+						<button
+							style="background-color: #000000; height: 20px; width: 20px"
+							onclick="color('#000000')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #b0171f; height: 20px; width: 20px"
+							onclick="color('#B0171F')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #da70d6; height: 20px; width: 20px"
+							onclick="color('#DA70D6')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #8a2be2; height: 20px; width: 20px"
+							onclick="color('#8A2BE2')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #0000ff; height: 20px; width: 20px"
+							onclick="color('#0000FF')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #4876ff; height: 20px; width: 20px"
+							onclick="color('#4876FF')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #cae1ff; height: 20px; width: 20px"
+							onclick="color('#CAE1FF')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #6e7b8b; height: 20px; width: 20px"
+							onclick="color('#6E7B8B')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #00c78c; height: 20px; width: 20px"
+							onclick="color('#00C78C')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #00fa9a; height: 20px; width: 20px"
+							onclick="color('#00FA9A')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #00ff7f; height: 20px; width: 20px"
+							onclick="color('#00FF7F')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #00c957; height: 20px; width: 20px"
+							onclick="color('#00C957')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #3d9140; height: 20px; width: 20px"
+							onclick="color('#3D9140')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #32cd32; height: 20px; width: 20px"
+							onclick="color('#32CD32')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #00ee00; height: 20px; width: 20px"
+							onclick="color('#00EE00')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #008b00; height: 20px; width: 20px"
+							onclick="color('#008B00')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #76ee00; height: 20px; width: 20px"
+							onclick="color('#76EE00')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #caff70; height: 20px; width: 20px"
+							onclick="color('#CAFF70')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #ffff00; height: 20px; width: 20px"
+							onclick="color('#FFFF00')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #cdcd00; height: 20px; width: 20px"
+							onclick="color('#CDCD00')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #fff68f; height: 20px; width: 20px"
+							onclick="color('#FFF68F')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #fffacd; height: 20px; width: 20px"
+							onclick="color('#FFFACD')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #ffec8b; height: 20px; width: 20px"
+							onclick="color('#FFEC8B')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #ffd700; height: 20px; width: 20px"
+							onclick="color('#FFD700')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #f5deb3; height: 20px; width: 20px"
+							onclick="color('#F5DEB3')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #ffe4b5; height: 20px; width: 20px"
+							onclick="color('#FFE4B5')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #eecfa1; height: 20px; width: 20px"
+							onclick="color('#EECFA1')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #ff9912; height: 20px; width: 20px"
+							onclick="color('#FF9912')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #8e388e; height: 20px; width: 20px"
+							onclick="color('#8E388E')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #7171c6; height: 20px; width: 20px"
+							onclick="color('#7171C6')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #7d9ec0; height: 20px; width: 20px"
+							onclick="color('#7D9EC0')"></button>
+					</td>
+					<td>
+						<button
+							style="background-color: #388e8e; height: 20px; width: 20px"
+							onclick="color('#388E8E')"></button>
+					</td>
+				</tr>
+				<tr>
+					<td class="m-auto pr-3"><label>Gruesor de la linea</label></td>
+					<td>
+						<button
+							id="pixel_plus"
+							type="button"
+							onclick="add_pixel()"
+							class="btn btn-info fs-1 mr-3">
+							+
+						</button>
+					</td>
+					<td>
+						<button
+							id="pixel_minus"
+							type="button"
+							onclick="reduce_pixel()"
+							class="btn btn-info fs-1">
+							-
+						</button>
+					</td>
+				</tr>
+			</table>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+		<script src=" {{ url_for('static', filename='js/pintarPantalla.js') }}"></script>
+		
+{% endblock %}

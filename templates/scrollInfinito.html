@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block title %}croll Inifinito {% endblock %} {% block content
+%}
+
+  <section >
+    <div class="row">
+      <articule class="col-12 col-sm-12 m-auto">
+        <h1 class="text-center mb-5 p-5 bg-dark text-white">Scroll Infinito</h1>
+        <div class="containerCards m-auto flex-nowrap mt-5">
+          <div class="box a"></div>
+          <div class="box b"></div>
+          <div class="box c"></div>
+          <div class="box d"></div>
+          <div class="box e"></div>
+          <div class="box f"></div>
+          <div class="box e"></div>
+          <div class="box f"></div>
+        </div>
+      </articule>
+    </div>
+  </section>
+  <div id="botup" ><a href="#" ><i class="fa-solid fa-angles-up"></i></div>
+
+  <!-- Scripts -->
+
+  <script src="{{ url_for('static',filename='js/scrollInifinito.js') }}"></script>
+  {% endblock %}
