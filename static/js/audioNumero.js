@@ -1,3 +1,4 @@
+//instancia del DOM
 const btnIniciar = document.getElementById("btnIniciarAudio");
 const btnDetener = document.getElementById("btnDetenerAudio");
 const textAudio = document.getElementById("textAudio");
@@ -23,11 +24,11 @@ grabar.onresult = (event) => {
     // creamos una varible para obtener el texto capturado 
     const texto = event.results[ event.results.length - 1 ][ 0 ].transcript;
     // hacemos una condición para que el text capturado sea un número
-    if(isNaN(texto)== false){
+    if (isNaN(texto) == false) {
         //Si es un número lo imprime
         textAudio.value = texto;
-    }else{
+    } else {
         //Si no envia a pantalla un mensaje de error
-        textAudio.value=" No es un Número"
+        textAudio.value = " No es un Número"
     }
 }

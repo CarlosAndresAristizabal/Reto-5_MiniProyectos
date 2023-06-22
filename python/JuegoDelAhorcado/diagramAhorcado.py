@@ -1,3 +1,4 @@
+# Esquema para imprimir en pantalla
 vidas_diccionario_visual = {
     0: """
                 ___________

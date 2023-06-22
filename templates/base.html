@@ -87,11 +87,21 @@
 									Ciclo 2
 								</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-									<a class="dropdown-item" href="#">Escribir Número en palabras</a>
-									<a class="dropdown-item" href="#">Web Scrape</a>
-									<a class="dropdown-item" href="#">Menú Telefónico (USSD)</a>
-									<a class="dropdown-item" href="#">Ratings de Películas</a>
-									<a class="dropdown-item" href="#">Juego del Ahorcado</a>
+									<a class="dropdown-item" href="{{ url_for('escribirNumeroaPalabra') }}"
+										>Escribir Número en palabras</a
+									>
+									<a class="dropdown-item" href="{{ url_for('webScraper') }}"
+										>Web Scrape</a
+									>
+									<a class="dropdown-item" href="{{ url_for('menuTelefonico') }}"
+										>Menú Telefónico</a
+									>
+									<a class="dropdown-item" href="{{ url_for('raringPeliculas') }}"
+										>Ratings de Películas</a
+									>
+									<a class="dropdown-item" href="{{ url_for('juegoAhorcado') }}"
+										>Juego del Ahorcado</a
+									>
 								</div>
 							</li>
 							<li class="nav-item dropdown">
